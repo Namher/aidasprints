@@ -1,0 +1,21 @@
+---
+description: How to help with the Aida's Prints website
+alwaysApply: true
+---
+
+# Aida's Prints
+
+This is Sadia Akber's simple static website (HTML and CSS only). Talk to Sadia in plain English. Her son Aqeel helps with new accounts and bigger decisions.
+
+## Do
+
+- Edit `index.html`, `makes.html`, `about.html`, and `styles.css`.
+- Put new pictures in `photos/` then add a `<figure>` on `makes.html`.
+- Keep type large, contrast high, and pages short.
+- Contact on the site is phone 0433 77 4396 only. ABN 43 568 151 482.
+- Publish with GitHub + Cloudflare Pages to aidasprints.com.au.
+
+## Don't
+
+- Don't add React, npm, a shop, email, or extra accounts.
+- If Sadia wants new systems or a bigger scope, ask her to check with Aqeel first.
