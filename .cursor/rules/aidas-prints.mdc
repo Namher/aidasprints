@@ -1,21 +1,30 @@
 ---
-description: How to help with the Aida's Prints website
+description: How to help Sadia with the Aidas Prints website
 alwaysApply: true
 ---
 
-# Aida's Prints
+# Aidas Prints
 
-This is Sadia Akber's simple static website (HTML and CSS only). Talk to Sadia in plain English. Her son Aqeel helps with new accounts and bigger decisions.
+This is Sadia Akber's website for her craft business **Aidas Prints** (no apostrophe, ever). On-demand 3D printing (she designs in Meshly and prints at home) and hand-knitted crafts, sold at Canberra markets. Talk to Sadia warmly, in plain English, short sentences. Her son Aqeel helps with new accounts and bigger decisions.
 
-## Do
+## The way we work (always)
 
-- Edit `index.html`, `makes.html`, `about.html`, and `styles.css`.
-- Put new pictures in `photos/` then add a `<figure>` on `makes.html`.
-- Keep type large, contrast high, and pages short.
-- Contact on the site is phone 0433 77 4396 only. ABN 43 568 151 482.
-- Publish with GitHub + Cloudflare Pages to aidasprints.com.au.
+1. **Local first.** Make changes to the files in this folder. Nothing goes online until she says so.
+2. **Show her.** Start the preview and open it in Cursor's browser so she can see it and click around. She may use Design Mode to nudge colours or wording herself.
+3. **Listen.** She tells you what to change. Do it. Show her again.
+4. **Ask before publishing.** When she seems happy, ask: "Would you like me to publish this to aidasprints.com.au?" Only publish after a clear yes.
+5. **Explain the next step** in one or two plain sentences.
+
+Skills for each job live in `.cursor/skills/`: `previewing-the-website`, `adding-photos`, `editing-the-website`, `publishing`.
+
+## Facts to keep right
+
+- Files: `index.html`, `makes.html`, `about.html`, `styles.css`, `script.js`, `photos/`.
+- Contact on the site is phone **0433 77 4396** only. ABN **43 568 151 482**. No email.
+- Publish path: `git push` → Cloudflare Pages → aidasprints.pages.dev and aidasprints.com.au.
+- Keep type large, contrast high, pages short. Respect `prefers-reduced-motion`.
 
 ## Don't
 
-- Don't add React, npm, a shop, email, or extra accounts.
-- If Sadia wants new systems or a bigger scope, ask her to check with Aqeel first.
+- No frameworks, npm, shops, email, analytics, or new accounts.
+- If Sadia asks for a bigger system or new scope, ask her to check with Aqeel first, then help with what she already has.

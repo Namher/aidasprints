@@ -3,51 +3,98 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About — Aida’s Prints</title>
+    <title>About — Aidas Prints</title>
     <meta
       name="description"
-      content="About Sadia Akber and Aida’s Prints in Canberra."
+      content="About Sadia Akber and Aidas Prints — on-demand 3D printing and knit crafts in Canberra."
     />
+    <meta name="theme-color" content="#fbf6ef" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
+
     <header class="site-header">
-      <a class="logo" href="index.html">Aida’s Prints</a>
-      <nav aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="makes.html">Makes</a>
-        <a href="about.html" aria-current="page">About</a>
-      </nav>
+      <div class="wrap">
+        <a class="logo" href="index.html">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Aidas Prints
+        </a>
+        <nav aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="makes.html">Makes</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main id="main">
-      <section class="page-intro">
-        <h1>About</h1>
-        <p class="lead">
-          I’m Sadia Akber. Aida’s Prints is my small sole-trader practice in
-          Canberra. I make crafts and 3D prints, and I enjoy the people and
-          chats at local markets as much as the making.
-        </p>
+      <section class="hero">
+        <div class="blob blob-1" aria-hidden="true"></div>
+        <div class="blob blob-3" aria-hidden="true"></div>
+        <div class="wrap">
+          <p class="eyebrow">About</p>
+          <h1>Hello, I’m <span class="gradient-text">Sadia</span></h1>
+          <p class="lead">
+            Aidas Prints is my small making practice in Canberra — 3D printing
+            on demand, knitting by hand, and lots of good chats at markets.
+          </p>
+        </div>
       </section>
 
-      <section class="prose">
-        <h2>How to reach me</h2>
-        <p>
-          Phone:
-          <a href="tel:+61433774396">0433 77 4396</a>
-        </p>
-        <p>ABN 43 568 151 482</p>
-        <p>
-          There isn’t an email address on this website yet. Calling or texting
-          is the best way.
-        </p>
+      <section>
+        <div class="wrap prose reveal">
+          <h2>How it started</h2>
+          <p>
+            I have always made things. Knitting came first — the quiet kind of
+            craft you can do while talking. Then 3D printing arrived and opened
+            a door: suddenly I could make almost any small object someone
+            described to me.
+          </p>
+          <p>
+            Now I design pieces in Meshly and print them at home. A hook for a
+            caravan, a cake topper with a grandchild’s name, a stand for a
+            phone. If you can picture it, we can usually make it.
+          </p>
+          <h2>Why on demand</h2>
+          <p>
+            I do not keep a big stock. I make what people actually want, one at
+            a time, in the colour they like. It is slower, and I think that is
+            the point.
+          </p>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap contact">
+          <div class="reveal">
+            <h2>How to reach me</h2>
+            <p class="lead" style="margin: 0 0 1rem">
+              Calling or texting is the best way. There is no email on this
+              website yet.
+            </p>
+            <a class="phone" href="tel:+61433774396">0433 77 4396</a>
+            <p class="fineprint">Aidas Prints · Sole trader · ABN 43 568 151 482</p>
+          </div>
+          <div class="card reveal">
+            <h3>Where to find me</h3>
+            <p>
+              Markets around Canberra. Ask me which one is next and I will tell
+              you the date and the spot.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Aida’s Prints · Canberra</p>
-      <p><a href="tel:+61433774396">0433 77 4396</a> · ABN 43 568 151 482</p>
+      <div class="wrap">
+        <p>© <span id="year"></span> Aidas Prints · Canberra</p>
+        <p><a href="tel:+61433774396">0433 77 4396</a> · ABN 43 568 151 482</p>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

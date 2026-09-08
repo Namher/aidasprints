@@ -3,51 +3,99 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Makes — Aida’s Prints</title>
+    <title>Makes — Aidas Prints</title>
     <meta
       name="description"
-      content="Photos of crafts and 3D prints by Aida’s Prints in Canberra."
+      content="Photos of custom 3D prints and knit crafts by Aidas Prints in Canberra."
     />
+    <meta name="theme-color" content="#fbf6ef" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
+
     <header class="site-header">
-      <a class="logo" href="index.html">Aida’s Prints</a>
-      <nav aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="makes.html" aria-current="page">Makes</a>
-        <a href="about.html">About</a>
-      </nav>
+      <div class="wrap">
+        <a class="logo" href="index.html">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Aidas Prints
+        </a>
+        <nav aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="makes.html" aria-current="page">Makes</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main id="main">
-      <section class="page-intro">
-        <h1>Makes</h1>
-        <p class="lead">
-          Photos of things I’ve made. New pictures go in the photos folder on
-          this computer, then we add them here together.
-        </p>
+      <section class="hero">
+        <div class="blob blob-2" aria-hidden="true"></div>
+        <div class="blob blob-3" aria-hidden="true"></div>
+        <div class="wrap">
+          <p class="eyebrow">The gallery</p>
+          <h1>Things I have <span class="gradient-text">made</span></h1>
+          <p class="lead">
+            Custom 3D prints and hand-knitted pieces. New photos are added as I
+            finish new work.
+          </p>
+        </div>
       </section>
 
-      <section class="gallery" aria-label="Photos of makes">
-        <!-- Add a new photo like this:
-        <figure>
-          <img src="photos/your-photo.jpg" alt="Short description of the piece" />
-          <figcaption>Optional caption</figcaption>
-        </figure>
-        -->
-        <p class="empty-note">
-          No photos on the site yet. Drop picture files into the
-          <strong>photos</strong> folder, then ask Cursor to add them to this
-          page.
-        </p>
+      <section>
+        <div class="wrap">
+          <div class="gallery" aria-label="Photos of makes">
+            <!-- HOW TO ADD A PHOTO
+                 1. Put the picture file in the photos folder (simple name, no spaces).
+                 2. Copy the three lines below, paste them, and change the file name and words.
+
+            <figure class="reveal">
+              <img src="photos/your-photo.jpg" alt="Say what is in the picture" />
+              <figcaption>Short caption</figcaption>
+            </figure>
+            -->
+            <figure class="reveal">
+              <div class="placeholder">Your first photo goes here</div>
+              <figcaption>Add a picture to the photos folder</figcaption>
+            </figure>
+            <figure class="reveal">
+              <div class="placeholder">A custom 3D print</div>
+              <figcaption>Designed in Meshly, printed in Canberra</figcaption>
+            </figure>
+            <figure class="reveal">
+              <div class="placeholder">A knitted piece</div>
+              <figcaption>Hand knitted</figcaption>
+            </figure>
+            <figure class="reveal">
+              <div class="placeholder">A market day</div>
+              <figcaption>My table at a Canberra market</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap contact">
+          <div class="reveal">
+            <h2>Want one like this?</h2>
+            <p class="lead" style="margin: 0 0 1rem">
+              Most pieces can be made again, in your colour or with your name.
+            </p>
+            <a class="phone" href="tel:+61433774396">0433 77 4396</a>
+            <p class="fineprint">Call or text Sadia</p>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Aida’s Prints · Canberra</p>
-      <p><a href="tel:+61433774396">0433 77 4396</a> · ABN 43 568 151 482</p>
+      <div class="wrap">
+        <p>© <span id="year"></span> Aidas Prints · Canberra</p>
+        <p><a href="tel:+61433774396">0433 77 4396</a> · ABN 43 568 151 482</p>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

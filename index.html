@@ -3,61 +3,188 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Aida’s Prints — crafts and 3D printing in Canberra</title>
+    <title>Aidas Prints — on-demand 3D printing and knit crafts in Canberra</title>
     <meta
       name="description"
-      content="Handmade crafts and 3D printed pieces by Aida’s Prints. Find Sadia at markets in Canberra."
+      content="Aidas Prints makes custom 3D printed pieces on demand and hand-knitted crafts in Canberra. Tell Sadia your idea, she designs it in Meshly and prints it. Find her at local markets."
     />
+    <meta name="theme-color" content="#fbf6ef" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
+
     <header class="site-header">
-      <a class="logo" href="index.html">Aida’s Prints</a>
-      <nav aria-label="Main">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="makes.html">Makes</a>
-        <a href="about.html">About</a>
-      </nav>
+      <div class="wrap">
+        <a class="logo" href="index.html">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Aidas Prints
+        </a>
+        <nav aria-label="Main">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="makes.html">Makes</a>
+          <a href="about.html">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main id="main">
+      <!-- HERO: the big welcome at the top -->
       <section class="hero">
-        <p class="eyebrow">Canberra markets</p>
-        <h1>Aida’s Prints</h1>
-        <p class="lead">
-          Handmade crafts and 3D printed pieces, made with care and shown at
-          markets around Canberra.
-        </p>
-        <p class="actions">
-          <a class="button" href="makes.html">See the makes</a>
-          <a class="button button-quiet" href="about.html">About Sadia</a>
-        </p>
+        <div class="blob blob-1" aria-hidden="true"></div>
+        <div class="blob blob-2" aria-hidden="true"></div>
+        <div class="blob blob-3" aria-hidden="true"></div>
+        <div class="wrap">
+          <p class="eyebrow">Canberra · Made to order</p>
+          <h1>
+            Ideas, <span class="gradient-text">printed</span> and
+            <span class="gradient-text">knitted</span> by hand.
+          </h1>
+          <p class="lead">
+            Custom 3D printed pieces made on demand, and knit crafts made with
+            love. If you can describe it, I can probably make it.
+          </p>
+          <p class="actions">
+            <a class="button" href="#contact">Ask for something custom</a>
+            <a class="button button-quiet" href="makes.html">See what I make</a>
+          </p>
+          <p class="hero-note">Find me at markets around Canberra.</p>
+        </div>
       </section>
 
-      <section class="cards">
-        <article>
-          <h2>Photos</h2>
-          <p>
-            Pictures of new work live in the photos folder on this computer.
-            We add them to the Makes page together.
+      <!-- WHAT I MAKE -->
+      <section id="make" class="band">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2>What I make</h2>
+            <p>Small things you can hold, gift and use. Each one made here in Canberra.</p>
+          </div>
+          <div class="cards">
+            <article class="card reveal">
+              <div class="icon" aria-hidden="true">🖨️</div>
+              <h3>Custom 3D prints</h3>
+              <p>
+                A replacement knob, a name tag, a planter, a toy, a gift with a
+                name on it. Tell me what you need and I will design and print it.
+              </p>
+            </article>
+            <article class="card reveal">
+              <div class="icon" aria-hidden="true">🧶</div>
+              <h3>Knit crafts</h3>
+              <p>
+                Hand-knitted pieces — warm, soft and made slowly. Beanies,
+                scarves and small keepsakes, in colours you choose.
+              </p>
+            </article>
+            <article class="card reveal">
+              <div class="icon" aria-hidden="true">🎁</div>
+              <h3>Market finds</h3>
+              <p>
+                Ready-made prints and crafts on my table at Canberra markets.
+                Come and say hello, have a look, and take something home.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section id="how" class="band-dark">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2>How a custom piece happens</h2>
+            <p>Three easy steps. No jargon, no fuss.</p>
+          </div>
+          <ol class="steps">
+            <li class="reveal">
+              <h3>Tell me your idea</h3>
+              <p>
+                Call or text with what you have in mind. A photo or a sketch
+                helps, but a chat is enough.
+              </p>
+            </li>
+            <li class="reveal">
+              <h3>I design and print it</h3>
+              <p>
+                I shape the model in Meshly, pick a colour with you, and print
+                it right here in Canberra.
+              </p>
+            </li>
+            <li class="reveal">
+              <h3>Pick it up</h3>
+              <p>
+                Collect it at my next market or arrange a time in Canberra. Then
+                it is yours.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- RECENT MAKES -->
+      <section id="recent">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2>Recent makes</h2>
+            <p>A few of the latest pieces. More on the Makes page.</p>
+          </div>
+          <div class="gallery">
+            <!-- To show a photo here, copy this and change the file name and words:
+            <figure class="reveal">
+              <img src="photos/your-photo.jpg" alt="Say what is in the picture" />
+              <figcaption>Short caption</figcaption>
+            </figure>
+            -->
+            <figure class="reveal">
+              <div class="placeholder">Your first photo goes here</div>
+              <figcaption>Add a picture to the photos folder</figcaption>
+            </figure>
+            <figure class="reveal">
+              <div class="placeholder">A 3D print you are proud of</div>
+              <figcaption>Custom 3D print</figcaption>
+            </figure>
+            <figure class="reveal">
+              <div class="placeholder">A knitted piece</div>
+              <figcaption>Hand knitted</figcaption>
+            </figure>
+          </div>
+          <p class="actions" style="margin-top: 2rem">
+            <a class="button button-quiet" href="makes.html">See all makes</a>
           </p>
-        </article>
-        <article>
-          <h2>Say hello</h2>
-          <p>
-            Call or text
-            <a href="tel:+61433774396">0433 77 4396</a>
-            if you see something you like at a market.
-          </p>
-          <p>ABN 43 568 151 482</p>
-        </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="band">
+        <div class="wrap contact">
+          <div class="reveal">
+            <h2>Say hello</h2>
+            <p class="lead" style="margin: 0 0 1rem">
+              Have an idea, or want to know where I will be next? Call or text
+              Sadia.
+            </p>
+            <a class="phone" href="tel:+61433774396">0433 77 4396</a>
+            <p class="fineprint">Aidas Prints · Sole trader · ABN 43 568 151 482</p>
+          </div>
+          <div class="card reveal">
+            <h3>Good to know</h3>
+            <p>
+              Small custom prints usually take a few days. Bigger pieces take a
+              little longer. I will always give you a fair price before I start.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Aida’s Prints · Canberra</p>
-      <p><a href="tel:+61433774396">0433 77 4396</a> · ABN 43 568 151 482</p>
+      <div class="wrap">
+        <p>© <span id="year"></span> Aidas Prints · Canberra</p>
+        <p><a href="tel:+61433774396">0433 77 4396</a> · ABN 43 568 151 482</p>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
