@@ -23,8 +23,8 @@
   --shadow: 0 1.2rem 3rem -1.4rem rgba(38, 25, 47, 0.35);
   --max: 72rem;
 
-  --serif: "Palatino Linotype", Palatino, "Iowan Old Style", "Book Antiqua", Georgia, serif;
-  --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --serif: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  --sans: Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 *,
