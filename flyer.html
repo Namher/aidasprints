@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aidas Prints — 3D printing flyer</title>
+    <style>
+      :root {
+        --bg: #fbf6ef;
+        --bg-deep: #f3e9dc;
+        --paper: #ffffff;
+        --ink: #26192f;
+        --muted: #5e5468;
+        --coral: #e2603f;
+        --plum: #4b2a5e;
+        --gradient: linear-gradient(135deg, #e2603f 0%, #d64c86 55%, #f4a63a 100%);
+        --font: Helvetica, "Helvetica Neue", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: var(--font);
+        color: var(--ink);
+        background: #e8ddd0;
+      }
+
+      .screen-help {
+        max-width: 52rem;
+        margin: 1.5rem auto 0;
+        padding: 1rem 1.25rem;
+        background: var(--paper);
+        border-radius: 1rem;
+      }
+
+      .screen-help h1 {
+        margin: 0 0 0.4rem;
+        font-size: 1.35rem;
+      }
+
+      .screen-help p {
+        margin: 0.4rem 0;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+
+      .stage {
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      .sheet-label {
+        width: 297mm;
+        margin: 0;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--plum);
+      }
+
+      .sheet {
+        width: 297mm;
+        height: 210mm;
+        background: var(--bg);
+        display: flex;
+        box-shadow: 0 1rem 2.5rem -1rem rgba(38, 25, 47, 0.4);
+      }
+
+      .panel {
+        width: 99mm;
+        height: 210mm;
+        padding: 11mm 9mm;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .panel + .panel {
+        border-left: 1px dashed #d9cbb8;
+      }
+
+      .eyebrow {
+        margin: 0;
+        font-size: 11pt;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--coral);
+      }
+
+      h2 {
+        margin: 0.35rem 0 0.6rem;
+        font-size: 22pt;
+        line-height: 1.15;
+      }
+
+      p {
+        margin: 0 0 0.55rem;
+        font-size: 11.5pt;
+        line-height: 1.4;
+      }
+
+      .fine {
+        margin: 0;
+        font-size: 8.5pt;
+        color: var(--muted);
+      }
+
+      ul {
+        margin: 0;
+        padding: 0 0 0 1.1rem;
+        font-size: 12pt;
+        line-height: 1.45;
+      }
+
+      li + li {
+        margin-top: 0.35rem;
+      }
+
+      .steps {
+        list-style: none;
+        padding: 0;
+      }
+
+      .steps li {
+        margin: 0 0 0.85rem;
+      }
+
+      .steps strong {
+        display: block;
+        font-size: 13pt;
+        margin-bottom: 0.15rem;
+      }
+
+      .photo {
+        width: 100%;
+        height: 58mm;
+        object-fit: cover;
+        border-radius: 8px;
+        background: var(--bg-deep);
+      }
+
+      .photo-pandy {
+        object-position: center 25%;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      figcaption {
+        margin: 0.4rem 0 0;
+        font-size: 10pt;
+        font-weight: 700;
+        color: var(--plum);
+      }
+
+      .mark {
+        width: 14mm;
+        height: 14mm;
+        border-radius: 4mm;
+        background: var(--gradient);
+      }
+
+      .cover {
+        background: var(--plum);
+        color: #fff;
+        justify-content: flex-start;
+        gap: 8mm;
+      }
+
+      .cover .eyebrow,
+      .cover p,
+      .cover .fine,
+      .cover figcaption {
+        color: #f3e9dc;
+      }
+
+      .cover h2 {
+        font-size: 26pt;
+        margin: 0;
+        color: #fff;
+      }
+
+      .cover .lead {
+        font-size: 14pt;
+        line-height: 1.3;
+        color: #fff;
+      }
+
+      .back {
+        background: var(--bg-deep);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 6mm;
+      }
+
+      .phone {
+        font-size: 22pt;
+        font-weight: 800;
+        color: var(--plum);
+        text-decoration: none;
+        line-height: 1.2;
+      }
+
+      .back h2 {
+        font-size: 18pt;
+      }
+
+      .flap {
+        background: var(--paper);
+      }
+
+      .web {
+        font-size: 13pt;
+        font-weight: 700;
+        color: var(--plum);
+      }
+
+      @media print {
+        @page {
+          size: A4 landscape;
+          margin: 0;
+        }
+
+        html,
+        body {
+          background: #fff;
+        }
+
+        .screen-help,
+        .sheet-label {
+          display: none !important;
+        }
+
+        .stage {
+          padding: 0;
+          gap: 0;
+        }
+
+        .sheet {
+          box-shadow: none;
+          page-break-after: always;
+          break-after: page;
+        }
+
+        .sheet:last-child {
+          page-break-after: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="screen-help">
+      <h1>Aidas Prints flyer — folds in three</h1>
+      <p>This page is only on this computer. It is not on your public website.</p>
+      <p>
+        Print on A4, both sides of the paper. Choose landscape and “flip on the
+        short edge”. Fold the right third in, then the left third over it.
+      </p>
+    </div>
+
+    <div class="stage">
+      <p class="sheet-label">Outside of the paper — front, back, and flap</p>
+      <div class="sheet outside">
+        <article class="panel flap">
+          <div>
+            <p class="eyebrow">Find me</p>
+            <h2>Call or text Sadia</h2>
+            <p>Tell me what you need. I give you a fair price before I start.</p>
+            <p>
+              Collect it at a Canberra market, or we arrange a time. Tap to pay,
+              or use PayID.
+            </p>
+          </div>
+          <figure>
+            <img
+              class="photo photo-pandy"
+              src="photos/pandy.jpg"
+              alt="A cream 3D printed figure of a dog standing beside a smaller dog, made as a keepsake of Pandy"
+            />
+            <figcaption>Pandy, a keepsake print</figcaption>
+          </figure>
+          <div>
+            <p class="web">aidasprints.com.au</p>
+            <p class="fine">Aidas Prints · Canberra · ABN 43 568 151 482</p>
+          </div>
+        </article>
+
+        <article class="panel back">
+          <p class="eyebrow">Come and say hello</p>
+          <h2>Ring me about a print</h2>
+          <a class="phone" href="tel:+61433774396">0433 77 4396</a>
+          <p>Custom 3D prints, made here in Canberra.</p>
+          <img
+            class="photo"
+            src="photos/chess-set-pink-and-clear.jpg"
+            alt="A 3D printed chess set with pink and clear pieces"
+          />
+          <p class="fine">Aidas Prints · Sole trader</p>
+        </article>
+
+        <article class="panel cover">
+          <div class="mark" aria-hidden="true"></div>
+          <div>
+            <p class="eyebrow">Canberra</p>
+            <h2>Aidas Prints</h2>
+            <p class="lead">Custom 3D printing, made at home.</p>
+          </div>
+          <img
+            class="photo"
+            src="photos/bunnybuck-rabbits.jpg"
+            alt="White 3D printed rabbits"
+          />
+          <p class="fine">Open this leaflet to see how to order.</p>
+        </article>
+      </div>
+
+      <p class="sheet-label">Inside of the paper — open the folds to read this</p>
+      <div class="sheet inside">
+        <article class="panel">
+          <div>
+            <p class="eyebrow">What I make</p>
+            <h2>Small things you can hold</h2>
+            <p>Tell me your idea. I design it and print it here.</p>
+            <ul>
+              <li>A replacement knob</li>
+              <li>A name tag or key tag</li>
+              <li>A planter or a toy</li>
+              <li>A gift with a name on it</li>
+              <li>A keepsake of a much-loved pet</li>
+              <li>A bust for 50 years of companionship</li>
+            </ul>
+          </div>
+          <figure>
+            <img
+              class="photo"
+              src="photos/50-years-companion-bust.jpg"
+              alt="A white 3D printed bust of a woman and a man together, made for fifty years of companionship"
+            />
+            <figcaption>50 years of companionship</figcaption>
+          </figure>
+        </article>
+
+        <article class="panel">
+          <div>
+            <p class="eyebrow">How it works</p>
+            <h2>Three easy steps</h2>
+            <ol class="steps">
+              <li>
+                <strong>1. Tell me your idea</strong>
+                A photo or a sketch helps. A chat is enough.
+              </li>
+              <li>
+                <strong>2. I design and print it</strong>
+                We pick a colour. I print it in Canberra.
+              </li>
+              <li>
+                <strong>3. See you in Canberra</strong>
+                Collect it at a market, or we set a time.
+              </li>
+            </ol>
+          </div>
+          <img
+            class="photo"
+            src="photos/koala-keyring.jpg"
+            alt="A 3D printed koala keyring"
+          />
+        </article>
+
+        <article class="panel">
+          <div>
+            <p class="eyebrow">Shops and cafes</p>
+            <h2>A print for your place</h2>
+            <p>
+              Need a holder, a name plate or a key tag for your shop? Call or
+              text. I give you a price, then I print it here.
+            </p>
+            <p>Small custom prints usually take a few days.</p>
+          </div>
+          <figure>
+            <img
+              class="photo"
+              src="photos/white-planters.jpg"
+              alt="White 3D printed planters with plants"
+            />
+            <figcaption>Planters, 3D printed</figcaption>
+          </figure>
+          <div>
+            <p class="web">0433 77 4396</p>
+            <p class="fine">aidasprints.com.au</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
