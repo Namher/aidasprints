@@ -578,6 +578,31 @@ section {
   margin: 0;
 }
 
+.qr-sign {
+  margin: 1.25rem 0 0;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  max-width: 14rem;
+}
+
+.qr-sign img {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.qr-sign figcaption {
+  margin: 0.6rem 0 0;
+  font-weight: 700;
+  color: var(--plum);
+}
+
+.qr-sign .fineprint {
+  margin-top: 0.35rem;
+}
+
 .prose {
   max-width: 44rem;
   font-size: 1.15rem;

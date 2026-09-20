@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stall sign — Aidas Prints</title>
+    <meta
+      name="description"
+      content="A printable stall sign for Aidas Prints, with a square code to aidasprints.com.au."
+    />
+    <meta name="theme-color" content="#fbf6ef" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .sign-help {
+        max-width: 40rem;
+        margin: 1.5rem auto 0;
+        padding: 0 1.25rem 1.5rem;
+      }
+
+      .sign-help p {
+        margin: 0.4rem 0 1rem;
+        color: var(--muted);
+      }
+
+      .sign-sheet {
+        width: min(100% - 2rem, 190mm);
+        margin: 0 auto 3rem;
+        padding: 2rem 1.75rem 2.25rem;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        text-align: center;
+        box-shadow: var(--shadow);
+      }
+
+      .sign-sheet .logo {
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .sign-sheet h1 {
+        margin: 0.2rem 0 0.4rem;
+        font-size: clamp(2rem, 6vw, 3rem);
+      }
+
+      .sign-sheet .tag {
+        margin: 0 0 1.25rem;
+        color: var(--muted);
+        font-size: 1.15rem;
+      }
+
+      .sign-qr {
+        width: min(100%, 16rem);
+        margin: 0 auto;
+        padding: 0.85rem;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+      }
+
+      .sign-qr img {
+        width: 100%;
+        height: auto;
+        image-rendering: pixelated;
+      }
+
+      .sign-url {
+        margin: 1.1rem 0 0.35rem;
+        font-weight: 700;
+        font-size: 1.35rem;
+        color: var(--plum);
+      }
+
+      .sign-sheet .phone {
+        font-size: clamp(1.8rem, 5vw, 2.6rem);
+      }
+
+      @media print {
+        .site-header,
+        .sign-help,
+        .site-footer {
+          display: none !important;
+        }
+
+        body {
+          background: #fff;
+        }
+
+        .sign-sheet {
+          width: 100%;
+          margin: 0;
+          border: 0;
+          box-shadow: none;
+          border-radius: 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="index.html">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Aidas Prints
+        </a>
+        <nav aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="makes.html">Makes</a>
+          <a href="about.html">About</a>
+          <a href="index.html#order">Order</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="sign-help">
+        <h1>Your stall sign</h1>
+        <p>
+          People scan the square and it opens aidasprints.com.au on their
+          phone. Your number is on the sign too.
+        </p>
+        <p class="actions">
+          <button class="button" type="button" onclick="window.print()">
+            Print this sign
+          </button>
+        </p>
+      </div>
+
+      <section class="sign-sheet" aria-label="Printable stall sign">
+        <h1>Aidas Prints</h1>
+        <p class="tag">Scan to see my makes</p>
+        <div class="sign-qr">
+          <img
+            src="photos/aidasprints-qr.png"
+            alt="A square code you can scan to open aidasprints.com.au"
+            width="800"
+            height="800"
+          />
+        </div>
+        <p class="sign-url">aidasprints.com.au</p>
+        <a class="phone" href="tel:+61433774396">0433 77 4396</a>
+        <p class="fineprint">Canberra · ABN 43 568 151 482</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>© <span id="year"></span> Aidas Prints · Canberra</p>
+        <p><a href="tel:+61433774396">0433 77 4396</a> · ABN 43 568 151 482</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
