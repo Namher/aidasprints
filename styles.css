@@ -373,6 +373,60 @@ section {
   background: var(--bg-deep);
 }
 
+#markets {
+  padding-top: 0;
+}
+
+.market-highlight {
+  position: relative;
+  background: var(--gradient-soft);
+  border: 3px solid var(--coral);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.market-highlight::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 10px;
+  background: var(--gradient);
+}
+
+.market-kicker {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  color: var(--coral);
+}
+
+.market-highlight h2 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.market-when,
+.market-where {
+  margin: 0 0 0.4rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.market-highlight p {
+  margin: 0.8rem 0 0;
+  max-width: 40rem;
+}
+
+.market-highlight a {
+  font-weight: 700;
+}
+
 .band-dark {
   background: radial-gradient(120% 140% at 10% 0%, #5a3070 0%, var(--ink) 55%, #1b1222 100%);
   color: #fff;
@@ -665,6 +719,7 @@ section {
   .blob,
   .button,
   .card,
+  .market-highlight,
   .gallery figure,
   .gallery img {
     animation: none;
