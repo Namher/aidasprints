@@ -36,6 +36,7 @@
 html {
   font-size: 112.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -578,6 +579,30 @@ section {
   padding: 1rem 1.25rem 1.2rem;
   color: var(--muted);
   font-weight: 600;
+}
+
+.gallery figcaption p {
+  margin: 0.45rem 0 0;
+  font-weight: 400;
+}
+
+.verse {
+  display: block;
+  margin: 0.35rem 0;
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: var(--ink);
+  unicode-bidi: isolate;
+}
+
+.gallery figure > a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.gallery figure > a:hover {
+  color: inherit;
 }
 
 .placeholder {
