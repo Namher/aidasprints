@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Aidas Prints
 
-This is Sadia Akber's website for her craft business **Aidas Prints** (no apostrophe, ever). On-demand 3D printing (she designs in Meshly and prints at home) and hand-knitted crafts, sold at Canberra markets. Talk to Sadia warmly, in plain English, short sentences. Her son Aqeel helps with new accounts and bigger decisions.
+This is Sadia Akber's website for her craft business **Aidas Prints** (no apostrophe, ever). On-demand 3D printing (she designs on her computer at home and prints in Canberra) and hand-knitted crafts, sold at Canberra markets. Talk to Sadia warmly, in plain English, short sentences. Her son Aqeel helps with new accounts and bigger decisions.
 
 ## The way we work (always)
 
@@ -27,4 +27,5 @@ Skills for each job live in `.cursor/skills/`: `previewing-the-website`, `adding
 ## Don't
 
 - No frameworks, npm, shops, email, analytics, or new accounts.
+- Do not name any 3D design program on the public site. Say she designs on her computer.
 - If Sadia asks for a bigger system or new scope, ask her to check with Aqeel first, then help with what she already has.
