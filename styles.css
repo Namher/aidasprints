@@ -486,6 +486,15 @@ section {
   color: var(--muted);
 }
 
+.card a {
+  font-weight: 700;
+}
+
+.card .actions {
+  justify-content: flex-start;
+  margin-top: 1.25rem;
+}
+
 .icon {
   width: 3.4rem;
   height: 3.4rem;
