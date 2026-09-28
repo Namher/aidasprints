@@ -594,6 +594,19 @@ section {
   transform: none;
 }
 
+/* Taller frames for upright game photos, so the card is not squeezed. */
+.gallery img.fit-contain.frame-tall {
+  aspect-ratio: 3 / 4;
+}
+
+.gallery img.fit-contain.frame-tiles {
+  aspect-ratio: 11 / 12;
+}
+
+.gallery.align-start {
+  align-items: start;
+}
+
 .gallery figcaption {
   padding: 1rem 1.25rem 1.2rem;
   color: var(--muted);
