@@ -599,10 +599,6 @@ section {
   aspect-ratio: 3 / 4;
 }
 
-.gallery img.fit-contain.frame-tiles {
-  aspect-ratio: 11 / 12;
-}
-
 .gallery.align-start {
   align-items: start;
 }
