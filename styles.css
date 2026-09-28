@@ -584,6 +584,16 @@ section {
   transform: scale(1.04);
 }
 
+/* Show a whole print inside the frame, for a piece that cover would clip. */
+.gallery img.fit-contain {
+  object-fit: contain;
+  background: var(--bg);
+}
+
+.gallery figure:hover img.fit-contain {
+  transform: none;
+}
+
 .gallery figcaption {
   padding: 1rem 1.25rem 1.2rem;
   color: var(--muted);
