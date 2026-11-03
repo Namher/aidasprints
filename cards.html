@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Business cards — Aidas Prints</title>
+    <meta
+      name="description"
+      content="A printable sheet of Aidas Prints business cards. Phone 0433 77 4396."
+    />
+    <meta name="theme-color" content="#fbf6ef" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .card-help {
+        max-width: 40rem;
+        margin: 1.5rem auto 0;
+        padding: 0 1.25rem 0.5rem;
+      }
+
+      .card-help p {
+        margin: 0.4rem 0 1rem;
+        color: var(--muted);
+      }
+
+      .sheet-label {
+        width: min(100% - 2rem, 210mm);
+        margin: 1.5rem auto 0.4rem;
+        font-weight: 700;
+        color: var(--plum);
+      }
+
+      .sheet-scroll {
+        overflow-x: auto;
+        padding: 0 1rem 2rem;
+      }
+
+      .print-sheet {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        background: #fff;
+        display: grid;
+        grid-template-columns: 90mm 90mm;
+        grid-template-rows: repeat(4, 55mm);
+        justify-content: center;
+        align-content: center;
+        gap: 6mm 8mm;
+        box-shadow: var(--shadow);
+      }
+
+      .print-sheet .biz-card {
+        width: 90mm;
+        height: 55mm;
+        aspect-ratio: auto;
+        border-radius: 2mm;
+        padding: 4mm 5mm 3.5mm;
+        box-shadow: none;
+      }
+
+      .print-sheet .biz-brand {
+        font-size: 13pt;
+        gap: 2.5mm;
+      }
+
+      .print-sheet .logo-mark {
+        width: 8mm;
+        height: 8mm;
+        border-radius: 2mm;
+      }
+
+      .print-sheet .biz-tag {
+        font-size: 9.5pt;
+        max-width: none;
+      }
+
+      .print-sheet .biz-place {
+        font-size: 8pt;
+      }
+
+      .print-sheet .biz-phone {
+        font-size: 13pt;
+      }
+
+      .print-sheet .biz-web {
+        font-size: 9pt;
+      }
+
+      .print-sheet .biz-abn {
+        font-size: 7.5pt;
+      }
+
+      @media print {
+        @page {
+          size: A4 portrait;
+          margin: 0;
+        }
+
+        body {
+          background: #fff;
+        }
+
+        .site-header,
+        .card-help,
+        .sheet-label,
+        .skip {
+          display: none !important;
+        }
+
+        .sheet-scroll {
+          overflow: visible;
+          padding: 0;
+        }
+
+        .print-sheet {
+          box-shadow: none;
+          page-break-after: always;
+          break-after: page;
+        }
+
+        .print-sheet:last-child {
+          page-break-after: auto;
+          break-after: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="index.html">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Aidas Prints
+        </a>
+        <nav aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="makes.html">Makes</a>
+          <a href="index.html#hooks">Hooks</a>
+          <a href="cards.html" aria-current="page">Cards</a>
+          <a href="about.html">About</a>
+          <a href="index.html#games">Games</a>
+          <a href="index.html#markets">Markets</a>
+          <a href="index.html#order">Order</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="card-help">
+        <h1>Logo business cards</h1>
+        <p>
+          The big cards below are the front and the back. Under them is a
+          sheet of eight, ready to cut.
+        </p>
+        <p>
+          To print, choose A4. Print the fronts, then the backs on the other
+          side. Turn the paper over from top to bottom, so the top stays the
+          top.
+        </p>
+        <p class="actions">
+          <button class="button" type="button" onclick="window.print()">
+            Print these cards
+          </button>
+          <a class="button button-quiet" href="index.html#cards">Back to the front page</a>
+        </p>
+      </div>
+
+      <div class="wrap" style="padding-top: 1rem; padding-bottom: 1rem">
+        <div class="card-pair" aria-label="Front and back, large">
+          <article class="biz-card biz-card-front" aria-label="Front of the card">
+            <div class="biz-brand">
+              <span class="logo-mark" aria-hidden="true"></span>
+              Aidas Prints
+            </div>
+            <p class="biz-tag">Handmade gifts, made just for you</p>
+            <p class="biz-place">Canberra</p>
+          </article>
+          <article class="biz-card biz-card-back" aria-label="Back of the card">
+            <p class="biz-tag">Send me a name or a photo. I make it into a gift.</p>
+            <a class="biz-phone" href="tel:+61433774396">0433 77 4396</a>
+            <p>
+              <span class="biz-web">aidasprints.com.au</span><br />
+              <span class="biz-abn">ABN 43 568 151 482</span>
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <p class="sheet-label">Fronts — eight cards</p>
+      <div class="sheet-scroll">
+        <section class="print-sheet" aria-label="Eight card fronts">
+          <article class="biz-card biz-card-front">
+            <div class="biz-brand"><span class="logo-mark" aria-hidden="true"></span>Aidas Prints</div>
+            <p class="biz-tag">Handmade gifts, made just for you</p>
+            <p class="biz-place">Canberra</p>
+          </article>
+          <article class="biz-card biz-card-front">
+            <div class="biz-brand"><span class="logo-mark" aria-hidden="true"></span>Aidas Prints</div>
+            <p class="biz-tag">Handmade gifts, made just for you</p>
+            <p class="biz-place">Canberra</p>
+          </article>
+          <article class="biz-card biz-card-front">
+            <div class="biz-brand"><span class="logo-mark" aria-hidden="true"></span>Aidas Prints</div>
+            <p class="biz-tag">Handmade gifts, made just for you</p>
+            <p class="biz-place">Canberra</p>
+          </article>
+          <article class="biz-card biz-card-front">
+            <div class="biz-brand"><span class="logo-mark" aria-hidden="true"></span>Aidas Prints</div>
+            <p class="biz-tag">Handmade gifts, made just for you</p>
+            <p class="biz-place">Canberra</p>
+          </article>
+          <article class="biz-card biz-card-front">
+            <div class="biz-brand"><span class="logo-mark" aria-hidden="true"></span>Aidas Prints</div>
+            <p class="biz-tag">Handmade gifts, made just for you</p>
+            <p class="biz-place">Canberra</p>
+          </article>
+          <article class="biz-card biz-card-front">
+            <div class="biz-brand"><span class="logo-mark" aria-hidden="true"></span>Aidas Prints</div>
+            <p class="biz-tag">Handmade gifts, made just for you</p>
+            <p class="biz-place">Canberra</p>
+          </article>
+          <article class="biz-card biz-card-front">
+            <div class="biz-brand"><span class="logo-mark" aria-hidden="true"></span>Aidas Prints</div>
+            <p class="biz-tag">Handmade gifts, made just for you</p>
+            <p class="biz-place">Canberra</p>
+          </article>
+          <article class="biz-card biz-card-front">
+            <div class="biz-brand"><span class="logo-mark" aria-hidden="true"></span>Aidas Prints</div>
+            <p class="biz-tag">Handmade gifts, made just for you</p>
+            <p class="biz-place">Canberra</p>
+          </article>
+        </section>
+      </div>
+
+      <p class="sheet-label">Backs — eight cards</p>
+      <div class="sheet-scroll">
+        <section class="print-sheet" aria-label="Eight card backs">
+          <article class="biz-card biz-card-back">
+            <p class="biz-tag">Send me a name or a photo. I make it into a gift.</p>
+            <a class="biz-phone" href="tel:+61433774396">0433 77 4396</a>
+            <p><span class="biz-web">aidasprints.com.au</span><br /><span class="biz-abn">ABN 43 568 151 482</span></p>
+          </article>
+          <article class="biz-card biz-card-back">
+            <p class="biz-tag">Send me a name or a photo. I make it into a gift.</p>
+            <a class="biz-phone" href="tel:+61433774396">0433 77 4396</a>
+            <p><span class="biz-web">aidasprints.com.au</span><br /><span class="biz-abn">ABN 43 568 151 482</span></p>
+          </article>
+          <article class="biz-card biz-card-back">
+            <p class="biz-tag">Send me a name or a photo. I make it into a gift.</p>
+            <a class="biz-phone" href="tel:+61433774396">0433 77 4396</a>
+            <p><span class="biz-web">aidasprints.com.au</span><br /><span class="biz-abn">ABN 43 568 151 482</span></p>
+          </article>
+          <article class="biz-card biz-card-back">
+            <p class="biz-tag">Send me a name or a photo. I make it into a gift.</p>
+            <a class="biz-phone" href="tel:+61433774396">0433 77 4396</a>
+            <p><span class="biz-web">aidasprints.com.au</span><br /><span class="biz-abn">ABN 43 568 151 482</span></p>
+          </article>
+          <article class="biz-card biz-card-back">
+            <p class="biz-tag">Send me a name or a photo. I make it into a gift.</p>
+            <a class="biz-phone" href="tel:+61433774396">0433 77 4396</a>
+            <p><span class="biz-web">aidasprints.com.au</span><br /><span class="biz-abn">ABN 43 568 151 482</span></p>
+          </article>
+          <article class="biz-card biz-card-back">
+            <p class="biz-tag">Send me a name or a photo. I make it into a gift.</p>
+            <a class="biz-phone" href="tel:+61433774396">0433 77 4396</a>
+            <p><span class="biz-web">aidasprints.com.au</span><br /><span class="biz-abn">ABN 43 568 151 482</span></p>
+          </article>
+          <article class="biz-card biz-card-back">
+            <p class="biz-tag">Send me a name or a photo. I make it into a gift.</p>
+            <a class="biz-phone" href="tel:+61433774396">0433 77 4396</a>
+            <p><span class="biz-web">aidasprints.com.au</span><br /><span class="biz-abn">ABN 43 568 151 482</span></p>
+          </article>
+          <article class="biz-card biz-card-back">
+            <p class="biz-tag">Send me a name or a photo. I make it into a gift.</p>
+            <a class="biz-phone" href="tel:+61433774396">0433 77 4396</a>
+            <p><span class="biz-web">aidasprints.com.au</span><br /><span class="biz-abn">ABN 43 568 151 482</span></p>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>© <span id="year"></span> Aidas Prints · Canberra</p>
+        <p>0433 77 4396 · ABN 43 568 151 482</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
