@@ -428,6 +428,45 @@ section {
   font-weight: 700;
 }
 
+.actions-start {
+  justify-content: flex-start;
+  margin-top: 1.25rem;
+}
+
+.story-when {
+  margin: 0 0 1.25rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--plum);
+}
+
+.photo-wait {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.photo-slot {
+  min-height: 11rem;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--gradient-soft);
+  border: 2px dashed var(--coral);
+  border-radius: var(--radius);
+}
+
+.photo-slot p {
+  margin: 0;
+}
+
+.photo-slot .fineprint {
+  margin-top: 0.25rem;
+}
+
 .band-dark {
   background: radial-gradient(120% 140% at 10% 0%, #5a3070 0%, var(--ink) 55%, #1b1222 100%);
   color: #fff;
