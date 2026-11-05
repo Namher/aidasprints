@@ -638,6 +638,55 @@ section {
   aspect-ratio: 3 / 4;
 }
 
+/* Market photos keep their own shape, so faces and the table are not cut off. */
+.gallery img.whole {
+  aspect-ratio: auto;
+  height: auto;
+}
+
+.gallery.story-photos,
+.gallery.market-photos {
+  margin-top: 1.25rem;
+  align-items: start;
+}
+
+.gallery.market-photos {
+  margin-bottom: 0.25rem;
+}
+
+.market-collage {
+  margin: 1.25rem 0 0.25rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.market-collage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.market-collage figcaption {
+  padding: 1rem 1.25rem 1.2rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.market-collage figcaption p {
+  margin: 0.45rem 0 0;
+  font-weight: 400;
+}
+
+@media (min-width: 50rem) {
+  .gallery.story-photos,
+  .gallery.market-photos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .gallery.align-start {
   align-items: start;
 }
