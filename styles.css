@@ -669,6 +669,11 @@ section {
   display: block;
 }
 
+/* The supplied hall photo is tall. Keep its own shape, and stop it filling a wide screen. */
+.market-collage.market-portrait {
+  max-width: 34rem;
+}
+
 .market-collage figcaption {
   padding: 1rem 1.25rem 1.2rem;
   color: var(--muted);
